@@ -1,0 +1,8 @@
+//? round
+//? ceil
+//? floor
+//? random
+//? max
+//? min
+//? pow
+//? sqrt

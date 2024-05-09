@@ -1,5 +1,3 @@
-Sure, here's the updated README with links added to the topics covered:
-
 ---
 
 # Lecture 1: Inception
@@ -20,7 +18,7 @@ _In this lecture, we delve into fundamental concepts essential for understanding
 ### Emmet
 
 - **Purpose**: Designed to accelerate coding processes by offering shortcuts for quick code expansion.
-  
+
 ---
 
 ### CDN (Content Delivery Network)
@@ -58,11 +56,7 @@ _In this lecture, we delve into fundamental concepts essential for understanding
 ### React.createElement
 
 ```javascript
-const element = React.createElement(
-  "h1",
-  { id: "head-1" },
-  "This is Heading1"
-);
+const element = React.createElement("h1", { id: "head-1" }, "This is Heading1");
 ```
 
 - **Usage**: Creates React elements programmatically.
@@ -77,7 +71,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 ```
 
 - **Purpose**: Creates a root folder for rendering elements.
-  
+
 ---
 
 ### render

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Nav from "./components/navbar/Nav";
 import Main from "./components/Main";
+import Footer from "./components/Footer";
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -19,4 +20,3 @@ const App = () => {
   );
 };
 export default App;
-

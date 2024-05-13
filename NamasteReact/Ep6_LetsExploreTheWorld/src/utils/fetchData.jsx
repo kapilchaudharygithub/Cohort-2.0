@@ -9,10 +9,7 @@ const fetchData = async (setArr,setFilteredArr) => {
     const arr =
       response.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
-    // console.log(
-    //   response.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-    //     ?.restaurants
-    // );
+   
 
     if (arr && arr.length > 0) {
       setArr(arr);

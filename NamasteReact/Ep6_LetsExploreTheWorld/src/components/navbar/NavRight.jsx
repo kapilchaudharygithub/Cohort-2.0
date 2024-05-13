@@ -1,6 +1,6 @@
-import Button from "../Button";
+import ButtonList from "./ButtonList";
 const NavRight = ({ toggleMenu, isMenuOpen, toggleDarkMode, isDarkMode }) => {
-  const ButtonList = [
+  const buttonList = [
     {
       btnName: "Home",
       btnId: "HomeBtn",
@@ -51,27 +51,30 @@ const NavRight = ({ toggleMenu, isMenuOpen, toggleDarkMode, isDarkMode }) => {
       },
     },
   ];
+  const hamBurgerMenu = (
+    <svg
+      className={`w-5 h-5 ${isDarkMode ? "text-gray-950" : "text-gray-50"}`}
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 17 14"
+    >
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M1 1h15M1 7h15M1 13h15"
+      />
+    </svg>
+  );
 
   return (
     <nav
       className={`self-center text-xl sm:text-2xl font-semibold whitespace-nowrap  flex justify-between  flex-wrap relative  `}
     >
       <button onClick={toggleMenu} className="block md:hidden ">
-        <svg
-          className={`w-5 h-5 ${isDarkMode ? "text-gray-950" : "text-gray-50"}`}
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 17 14"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M1 1h15M1 7h15M1 13h15"
-          />
-        </svg>
+        {hamBurgerMenu}
       </button>
 
       <div
@@ -83,24 +86,7 @@ const NavRight = ({ toggleMenu, isMenuOpen, toggleDarkMode, isDarkMode }) => {
             isDarkMode ? "border-gray-800" : "border-gray-500"
           }`}
         >
-          {ButtonList.map(({ btnName, btnId, btnUrl, btnEvent }) => (
-            <li key={btnId}>
-              <a
-                href={btnUrl}
-                className="block py-2 px-3 text-gray-900 rounded "
-              >
-                <Button
-                  onClickHandler={btnEvent}
-                  buttonName={btnName}
-                  buttonClasses={`h-8 p-0 text-sm p-2 pl-3 pr-3 w-full md:w-auto${
-                    isDarkMode
-                      ? "bg-gray-300 hover:bg-slate-700 text-gray-950 hover:text-zinc-100 "
-                      : "bg-slate-700 hover:bg-gray-300 text-zinc-100 hover:text-gray-950"
-                  }`}
-                />
-              </a>
-            </li>
-          ))}
+          <ButtonList buttonList={buttonList} isDarkMode={isDarkMode} />
         </ul>
       </div>
     </nav>

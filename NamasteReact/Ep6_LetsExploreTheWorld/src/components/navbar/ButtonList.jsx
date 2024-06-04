@@ -11,7 +11,7 @@ const ButtonList = ({ buttonList, isDarkMode }) =>
             isDarkMode
               ? "bg-gray-300 hover:bg-slate-700 text-gray-950 hover:text-zinc-100 "
               : "bg-slate-700 hover:bg-gray-300 text-zinc-100 hover:text-gray-950"
-          }`}
+          },`}
         />
       </a>
     </li>

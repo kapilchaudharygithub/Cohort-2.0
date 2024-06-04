@@ -115,10 +115,7 @@ Always use optional chaining to prevent any error if you try to find out somethi
   ```JS
   import axios from "axios";
 
-  const fetchData = async (setArr
-  ```
-
-,setFilteredArr) => {
+  const fetchData = async (setArr,setFilteredArr) => {
 try {
 const response = await axios.get(
 "https://kapilchaudharygithub.github.io/users-api-server/db.json"
@@ -138,8 +135,12 @@ const response = await axios.get(
     } catch (error) {
       console.log(error);
     }
+    }
 
-};
+
+  ```
+
+
 
 export default fetchData;
 
